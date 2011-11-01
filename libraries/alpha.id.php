@@ -1,6 +1,6 @@
 <?php
 /**
- * Translates a number to a short alhanumeric version
+ * Translates a number to a short alhanumeric version 
  *
  * Translated any number up to 9007199254740992
  * to a shorter version in letters e.g.:

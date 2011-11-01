@@ -2,7 +2,7 @@
 
 /******************************************************
 *  @desc: Transposes an associative array 			  *
-*  @param: An array of arrays 						  *
+*  @param: An array of arrays 						  * 
 *  @return: An array of arrays where rows became cols *
 *													  *
 /*****************************************************/
