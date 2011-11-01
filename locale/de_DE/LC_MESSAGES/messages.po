@@ -1,0 +1,144 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: DS\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-11-01 10:51+0100\n"
+"PO-Revision-Date: 2011-11-01 11:04+0100\n"
+"Last-Translator: nkb <hi@nkb.fr>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: C:/wamp/www/Data-Story\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: embed.php:7
+#: screens.php:7
+msgid "Data Story"
+msgstr "Data Story, ein Projekt von ABZV"
+
+#: screens.php:78
+msgid "Errors are displayed here"
+msgstr "Fehler werden hier angezeigt."
+
+#: screens.php:93
+msgid "1. Input data"
+msgstr "1. Daten eingeben"
+
+#: screens.php:96
+msgid "2. Check data"
+msgstr "2. Daten prüfen"
+
+#: screens.php:99
+msgid "3. Visualize"
+msgstr "3. Visualisierung"
+
+#: screens.php:102
+msgid "4. Publish"
+msgstr "4. Veröffentlichen"
+
+#: screens.php:109
+msgid "Next"
+msgstr "Nächste"
+
+#: screens.php:114
+msgid "Prev"
+msgstr "Zurück"
+
+#: actions/check.php:48
+#: actions/publish.php:45
+#: actions/transpose.php:54
+#: actions/visualize.php:44
+msgid "Could not fetch the data from the database."
+msgstr "Daten könnten nicht von Datenbank abgeholt werden."
+
+#: actions/input.php:101
+msgid "Could not store the data on the database."
+msgstr "Daten könnten nicht in Datenbank eingespeichert werden."
+
+#: actions/transpose.php:39
+msgid "Could not transpose the data in the database."
+msgstr "Daten könntent nicht in Datenbank umgestellt werden."
+
+#: actions/transpose.php:48
+msgid "You can only transpose a table with two entries."
+msgstr "Nur Tabellen mit 2 Einträge umgestellt werden können."
+
+#: js/navigation.js.php:63
+msgid "No data was input."
+msgstr "Kein Datei würde eingegeben."
+
+#: templates/check.php:108
+msgid "Check that your data was correctly understood."
+msgstr "Bitte prüfen Sie, dass Ihre Daten richtig verstanden werden."
+
+#: templates/check.php:108
+msgid "Transpose data."
+msgstr "Daten umstellen"
+
+#: templates/input.php:6
+msgid "Paste data here"
+msgstr "Daten hier eingügen"
+
+#: templates/login.php:6
+msgid "Welcome to DataStory"
+msgstr "Wilkommen!"
+
+#: templates/publish.php:91
+msgid "Publish and embed!"
+msgstr "Veröffentlichen und embedden"
+
+#: templates/publish.php:93
+msgid "Direct access URL"
+msgstr "Link zu diesem Chart"
+
+#: templates/publish.php:96
+msgid "Embed code"
+msgstr "Einbettungscode"
+
+#: templates/publish.php:99
+msgid "Embed width"
+msgstr "Einbettungsbreite"
+
+#: templates/publish.php:101
+msgid "Embed height"
+msgstr "Einbettungshöhe"
+
+#: templates/visualize.php:18
+#: templates/visualize.php:232
+msgid "Title"
+msgstr "Titel"
+
+#: templates/visualize.php:21
+#: templates/visualize.php:235
+msgid "Subtitle"
+msgstr "Untertitel"
+
+#: templates/visualize.php:225
+msgid "Build your visualization."
+msgstr "Erstellen Sie Ihre Visualisierung"
+
+#: templates/visualize.php:239
+msgid "Visualization type"
+msgstr "Visualisierungsart"
+
+#: templates/visualize.php:240
+msgid "Bar chart"
+msgstr "Balkenplan"
+
+#: templates/visualize.php:241
+msgid "Line chart"
+msgstr "Liniendiagramm"
+
+#: templates/visualize.php:242
+msgid "Pie chart"
+msgstr "Kreisdiagramm"
+
+#: templates/visualize.php:246
+msgid "Vertical axis title"
+msgstr "Titel der Hichachse"
+

@@ -1,0 +1,453 @@
+/*****************************/
+/*       General.scss        */
+/* Main styles for DataStory */
+/*****************************/
+/***************/
+/*   General    /
+/***************/
+/* line 49, ../sass/general.scss */
+html {
+  height: 100%;
+}
+
+/* line 53, ../sass/general.scss */
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #232323;
+  text-align: center;
+  height: 100%;
+}
+
+/* line 61, ../sass/general.scss */
+#black_veil {
+  display: none;
+  width: 100%;
+  min-height: 100%;
+  background-color: #000;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+}
+
+/* line 76, ../sass/general.scss */
+#loader {
+  position: fixed;
+  z-index: 5;
+  display: none;
+  top: 45%;
+  left: 45%;
+}
+
+/***************/
+/*    Header    /
+/***************/
+/* line 92, ../sass/general.scss */
+#header {
+  width: 800px;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 90px;
+}
+
+/* line 100, ../sass/general.scss */
+#logo {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 40px;
+  width: 78px;
+  height: 60px;
+  background-color: #3496ae;
+  -moz-border-radius-bottomleft: 8px;
+  -webkit-border-bottom-left-radius: 8px;
+  -o-border-bottom-left-radius: 8px;
+  -ms-border-bottom-left-radius: 8px;
+  -khtml-border-bottom-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  -moz-border-radius-bottomright: 8px;
+  -webkit-border-bottom-right-radius: 8px;
+  -o-border-bottom-right-radius: 8px;
+  -ms-border-bottom-right-radius: 8px;
+  -khtml-border-bottom-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* line 111, ../sass/general.scss */
+#logo_text {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 0;
+}
+/* line 116, ../sass/general.scss */
+#logo_text .data {
+  color: black;
+}
+/* line 119, ../sass/general.scss */
+#logo_text .story {
+  color: white;
+}
+
+/* line 124, ../sass/general.scss */
+#navbar {
+  width: 800px;
+  background-color: #232323;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+}
+
+/***************/
+/*   Container  /
+/***************/
+/* line 137, ../sass/general.scss */
+#container {
+  width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  min-height: 100%;
+  overflow: hidden;
+  font-family: Arial, Helvetica, Sans-serif;
+  background-color: black;
+  color: white;
+  -moz-box-shadow: black 0px 0px 10px;
+  -webkit-box-shadow: black 0px 0px 10px;
+  -o-box-shadow: black 0px 0px 10px;
+  box-shadow: black 0px 0px 10px;
+}
+
+/* line 153, ../sass/general.scss */
+#screen_container {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding: 30px 100px;
+  overflow: hidden;
+}
+
+/***************/
+/*   Buttons   */
+/***************/
+/* line 168, ../sass/general.scss */
+.button {
+  color: black;
+  cursor: pointer;
+  background: white;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #999999));
+  background-image: -webkit-linear-gradient(#ffffff, #999999);
+  background-image: -moz-linear-gradient(#ffffff, #999999);
+  background-image: -o-linear-gradient(#ffffff, #999999);
+  background-image: -ms-linear-gradient(#ffffff, #999999);
+  background-image: linear-gradient(#ffffff, #999999);
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -o-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid #606060;
+  text-shadow: rgba(255, 255, 255, 0.2) 1px 1px 0, rgba(255, 255, 255, 0.2) 1px 1px 0, rgba(255, 255, 255, 0.2) 1px 1px 0;
+}
+
+/* line 182, ../sass/general.scss */
+.nav {
+  font-size: 1.2em;
+  width: 90px;
+}
+
+/* line 187, ../sass/general.scss */
+#buttons {
+  position: absolute;
+  top: 390px;
+  width: 800px;
+  z-index: 2;
+}
+
+/* line 194, ../sass/general.scss */
+#button_next, #button_prev {
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+}
+
+/* line 200, ../sass/general.scss */
+#button_next {
+  float: right;
+}
+
+/* line 204, ../sass/general.scss */
+#button_prev {
+  float: left;
+}
+
+/***************/
+/* Breadcrumbs */
+/***************/
+/* line 227, ../sass/general.scss */
+#breadcrumbs {
+  height: 30px;
+  width: 800px;
+  text-align: center;
+}
+/* line 233, ../sass/general.scss */
+#breadcrumbs .on {
+  background-color: #3496ae;
+  color: black;
+  float: left;
+  width: 192px;
+  margin: 0 4px;
+  padding: 5px 0;
+  text-align: center;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  letter-spacing: -1px;
+  font-stretch: 90%;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+/* line 239, ../sass/general.scss */
+#breadcrumbs .off {
+  background-color: #606060;
+  color: white;
+  float: left;
+  width: 192px;
+  margin: 0 4px;
+  padding: 5px 0;
+  text-align: center;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+  letter-spacing: -1px;
+  font-stretch: 90%;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/***************/
+/* Error box   */
+/***************/
+/* line 249, ../sass/general.scss */
+#error {
+  display: none;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  background: #ffff88;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffff88), color-stop(100%, #ffff3a));
+  background-image: -webkit-linear-gradient(#ffff88, #ffff3a);
+  background-image: -moz-linear-gradient(#ffff88, #ffff3a);
+  background-image: -o-linear-gradient(#ffff88, #ffff3a);
+  background-image: -ms-linear-gradient(#ffff88, #ffff3a);
+  background-image: linear-gradient(#ffff88, #ffff3a);
+  font-size: 12px;
+  padding: 5px 10px;
+  margin: 5px;
+  width: 200px;
+  z-index: 5;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -o-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -o-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/****************/
+/* Input screen */
+/****************/
+/* line 282, ../sass/general.scss */
+#input {
+  position: relative;
+  z-index: 3;
+}
+/* line 287, ../sass/general.scss */
+#input #explainer {
+  font-size: 1.2em;
+}
+/* line 290, ../sass/general.scss */
+#input #input_data {
+  width: 580px;
+  color: white;
+  background-color: #606060;
+  -moz-box-shadow: inset 0 0 10px 5px black;
+  -webkit-box-shadow: inset 0 0 10px 5px black;
+  -o-box-shadow: inset 0 0 10px 5px black;
+  box-shadow: inset 0 0 10px 5px black;
+  border: none;
+  height: 150px;
+  padding: 10px;
+}
+
+/****************/
+/* Check screen */
+/****************/
+/* line 306, ../sass/general.scss */
+#check #explainer {
+  font-size: 1.2em;
+}
+/* line 310, ../sass/general.scss */
+#check table {
+  width: 580px;
+  padding: 10px;
+  font-size: 0.8em;
+}
+/* line 316, ../sass/general.scss */
+#check td {
+  background-color: #232323;
+  text-align: center;
+  width: 100px;
+}
+/* line 322, ../sass/general.scss */
+#check .header_cell {
+  font-weight: bold;
+  background-color: #3496ae;
+}
+/* line 327, ../sass/general.scss */
+#check .empty_cell {
+  background-color: black;
+}
+
+/* line 332, ../sass/general.scss */
+.transpose {
+  font-size: 0.8em;
+  margin-left: 1em;
+}
+
+/********************/
+/* Visualize screen */
+/********************/
+/* line 345, ../sass/general.scss */
+#visualize #chart {
+  width: 400px;
+  height: 300px;
+  margin: 30px 100px;
+  padding: 0;
+  overflow: hidden;
+}
+/* line 353, ../sass/general.scss */
+#visualize #explainer {
+  font-size: 1.2em;
+}
+/* line 357, ../sass/general.scss */
+#visualize #chart_customization {
+  width: 600px;
+  height: 90px;
+  padding: 0;
+}
+/* line 363, ../sass/general.scss */
+#visualize #chart_customization input, #visualize #chart_customization select {
+  width: 160px;
+  font-size: 1em;
+  color: white;
+  background-color: #606060;
+  -moz-box-shadow: inset 0 0 1px 0.5px black;
+  -webkit-box-shadow: inset 0 0 1px 0.5px black;
+  -o-box-shadow: inset 0 0 1px 0.5px black;
+  box-shadow: inset 0 0 1px 0.5px black;
+  border: none;
+  height: 25px;
+}
+/* line 369, ../sass/general.scss */
+#visualize #chart_customization input {
+  padding: 0 10px;
+}
+/* line 372, ../sass/general.scss */
+#visualize #chart_customization select {
+  width: 180px;
+  padding: 4px 0 0 4px;
+}
+/* line 378, ../sass/general.scss */
+#visualize .chart_customizator {
+  width: 200px;
+  height: 30px;
+  float: left;
+  font-size: 0.9em;
+  margin: 0 0 5px 0;
+}
+
+/********************/
+/*  Publish screen  */
+/********************/
+/* line 393, ../sass/general.scss */
+#publish #explainer {
+  font-size: 1.2em;
+}
+/* line 397, ../sass/general.scss */
+#publish p {
+  margin: 8px 0 2px 0;
+}
+/* line 401, ../sass/general.scss */
+#publish #direct_link_url {
+  width: 400px;
+  margin: 0 100px;
+  padding: 2px;
+  font-size: 1em;
+  color: white;
+  background-color: #606060;
+  -moz-box-shadow: inset 0 0 1px 0.5px black;
+  -webkit-box-shadow: inset 0 0 1px 0.5px black;
+  -o-box-shadow: inset 0 0 1px 0.5px black;
+  box-shadow: inset 0 0 1px 0.5px black;
+  border: none;
+  margin-bottom: 5px;
+}
+/* line 410, ../sass/general.scss */
+#publish #iframe_code {
+  position: relative;
+  z-index: 3;
+  width: 400px;
+  height: 60px;
+  margin: 8px 100px;
+  font-size: 1em;
+  color: white;
+  background-color: #606060;
+  -moz-box-shadow: inset 0 0 1px 0.5px black;
+  -webkit-box-shadow: inset 0 0 1px 0.5px black;
+  -o-box-shadow: inset 0 0 1px 0.5px black;
+  box-shadow: inset 0 0 1px 0.5px black;
+  border: none;
+  margin-bottom: 5px;
+}
+/* line 421, ../sass/general.scss */
+#publish .embed_customization {
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+/* line 426, ../sass/general.scss */
+#publish .embed_customizator {
+  position: relative;
+  z-index: 3;
+  width: 40px;
+  color: white;
+  background-color: #606060;
+  -moz-box-shadow: inset 0 0 1px 0.5px black;
+  -webkit-box-shadow: inset 0 0 1px 0.5px black;
+  -o-box-shadow: inset 0 0 1px 0.5px black;
+  box-shadow: inset 0 0 1px 0.5px black;
+  border: none;
+}
+/* line 433, ../sass/general.scss */
+#publish #publish_chart {
+  margin: 0 auto;
+  width: 600px;
+  height: 300px;
+}

@@ -1,0 +1,438 @@
+/*****************************/
+/*       General.scss        */
+/* Main styles for DataStory */
+/*****************************/
+
+@import "compass";
+@import "compass/css3";
+@import "compass/utilities";
+
+$error-color : #ff8;
+
+$color-on : #3496AE;
+$color-off : #606060;
+$color-on_text : #000;
+$color-off_text : #fff;
+
+$font-size : 1em;
+
+$background-color:#000;
+$dark-color:#232323;
+
+$container-width:800px;
+$grid-cols: 8;
+$row-h: 30px;
+$col-w: $container-width / $grid-cols;
+
+@mixin narrow-text{
+    letter-spacing:-1px;
+    font-stretch: 90%;
+    text-transform: uppercase;
+    font-weight:bold;
+}
+
+@mixin explainer{
+    font-size: $font-size + .2;
+}
+
+@mixin inset_input($shadow-length){
+    color:$color-off_text;
+    background-color:$color-off;
+    @include single-box-shadow($background-color, 0, 0, $shadow-length, $shadow-length/2, true);
+    border: none;
+}
+
+/***************/
+/*   General    /
+/***************/
+
+html {
+    height: 100%;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color:$dark-color;
+    text-align: center;
+    height: 100%;
+}
+
+#black_veil{
+    display:none;
+    width: 100%;
+    min-height: 100%;
+    background-color: #000;
+    @include opacity(0.8);
+    position: fixed;
+    z-index:4;
+    top:0;
+    left:0;
+}
+
+$loader-w: 10%;
+$loader-h: 10%;
+
+#loader{
+    position:fixed;
+    z-index:5;
+    display:none;
+    top: 50% - $loader-h/2;
+    left: 50% - $loader-w/2;
+}
+
+/***************/
+/*    Header    /
+/***************/
+
+$header-height : $row-h * 3;
+$logo-w: $row-h * 2;
+$navbar-height: $row-h;
+
+#header{
+    width: $container-width;
+    position:relative;
+    top:0;
+    left:0;
+    height: $header-height;
+}
+
+#logo{
+    position:absolute;
+    z-index:2;
+    top:0;
+    left:$container-width/20;
+    width:$logo-w * 1.3;
+    height:$logo-w;
+    background-color:$color-on;
+    @include border-bottom-radius(8px);    
+}
+
+#logo_text{
+    text-align:center;
+    padding-top: $logo-w - 20;
+    padding-bottom: 0;
+
+    .data{
+        color:$color-on_text;
+    }
+    .story{
+        color:$color-off_text;   
+    }
+}
+
+#navbar{
+    width: $container-width;
+    background-color:$dark-color;
+    position:absolute;
+    top:0;
+    left:0;
+    height: $navbar-height;
+}
+
+/***************/
+/*   Container  /
+/***************/
+
+#container{
+
+    width: $container-width;
+    margin: 0 auto;
+    text-align:left;
+    min-height: 100%;
+
+    overflow:hidden;
+
+    font-family: Arial, Helvetica, Sans-serif;
+    background-color:$background-color;
+    color:$color-off_text;
+
+    @include box-shadow($background-color 0px 0px 10px);
+}
+
+#screen_container{
+    position: relative;
+    top: 0;
+    left: 0;
+    padding:$row-h $col-w;
+    overflow: hidden;
+}
+
+
+/***************/
+/*   Buttons   */
+/***************/
+
+$button-color: $color-off_text;
+
+.button{
+    
+    color:$color-on_text;
+    cursor:pointer;
+        
+    background: $button-color;
+    @include background-image(linear-gradient($button-color, scale-lightness($button-color, -40))); 
+    @include border-radius(8px);
+    
+    border: 1px solid $color-off;
+
+    @include text-shadow(rgba(white, 0.2) 1px 1px 0, rgba(white, 0.2) 1px 1px 0, rgba(white, 0.2) 1px 1px 0);
+}
+
+.nav{
+        font-size: $font-size + .2;
+        width: $col-w - $col-w/10;
+    }
+
+#buttons{
+    position:absolute;
+    top: $row-h * 13;
+    width: $container-width;
+    z-index:2;
+}
+
+#button_next, #button_prev{
+    cursor:pointer;
+    width: $col-w;
+    text-align:center;
+}
+
+#button_next{
+    float:right;
+}
+
+#button_prev{
+    float:left;
+}
+
+/***************/
+/* Breadcrumbs */
+/***************/
+
+$breadcrumbs-height: $row-h;
+$breadcrumbs-width: $container-width;
+$breadcrumbs_steps: 4;
+$breadcrumbs-padding: 8px;
+
+@mixin transpose-on-off{
+    float:left;
+    width: $col-w * ($grid-cols / $breadcrumbs_steps) - $breadcrumbs-padding;
+    margin: 0 $breadcrumbs-padding/2;
+    padding: 5px 0;
+    text-align:center;
+    @include border-radius(6px);
+    @include narrow-text;
+}
+
+#breadcrumbs{
+    
+    height: $breadcrumbs-height;
+    width : $breadcrumbs-width;
+    text-align:center;
+
+    .on{
+        background-color:$color-on;
+        color:$color-on_text;
+        @include transpose-on-off;
+    }
+
+    .off {
+        background-color:$color-off;
+        color:$color-off_text;
+        @include transpose-on-off;
+    }
+}
+
+/***************/
+/* Error box   */
+/***************/
+#error{
+    display:none;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+        
+    background: $error-color;
+    @include background-image(linear-gradient($error-color, scale-lightness($error-color, -20))); 
+
+    font-size:12px;    
+    
+    padding:5px 10px;
+    margin:5px;
+    
+    width: $col-w * 2;
+
+    z-index: 5;
+    position:absolute;
+    top:10px;
+    right:10px;
+
+
+    @include single-box-shadow;
+
+    @include border-radius(6px);
+}
+
+/****************/
+/* Input screen */
+/****************/
+
+$textarea-padding: 10px;
+
+#input{
+    
+    position:relative;
+    z-index:3;
+
+    #explainer{
+        @include explainer;
+    }
+    #input_data{
+        width:$col-w * 6 - $textarea-padding * 2;
+        @include inset_input(10px);
+        height: $row-h * 5;
+        padding:$textarea-padding;
+    }
+}
+
+
+/****************/
+/* Check screen */
+/****************/
+
+$table-padding: 10px;
+
+#check{
+    #explainer{
+        @include explainer;
+    }
+
+    table{
+        width:$col-w * 6 - $table-padding * 2;
+        padding:$table-padding;
+        font-size: $font-size - .2;
+    }
+
+    td{
+        background-color:$dark-color;
+        text-align:center;
+        width:$col-w;
+    }
+
+    .header_cell{
+        font-weight: bold;
+        background-color:$color-on;
+    }
+
+    .empty_cell{
+        background-color:$background-color;
+    }
+}
+
+.transpose{
+        font-size: $font-size - .2;
+        margin-left: 1em;
+}
+
+/********************/
+/* Visualize screen */
+/********************/
+
+$customizator-margin-bottom: 5px;
+
+#visualize{
+
+    #chart{
+        width: $col-w *4;
+        height: $row-h * 10;
+        margin: $row-h $col-w;
+        padding: 0;
+        overflow:hidden;
+    }
+
+    #explainer{
+        @include explainer;
+    }
+
+    #chart_customization{
+        
+        width:$col-w * 6 ;
+        height:$row-h * 3;
+        padding:0;
+
+        input, select{
+            width:$col-w * 2 - $table-padding * 4;
+            font-size: $font-size;
+            @include inset_input(1px);
+            height:$row-h - $customizator-margin-bottom;
+        }
+        input{
+            padding: 0 $table-padding;
+        }
+        select{
+            width:$col-w * 2 - $table-padding * 2;
+            padding:4px 0 0 4px;
+        }
+    }
+
+    .chart_customizator{
+        width: $col-w * 2 ;
+        height: $row-h;
+        float:left;
+        font-size: $font-size - .1;
+        margin: 0 0 $customizator-margin-bottom 0;
+    }
+}
+
+/********************/
+/*  Publish screen  */
+/********************/
+
+
+#publish{
+    #explainer{
+        @include explainer;
+    }
+
+    p{
+        margin: 8px 0 2px 0;
+    }
+
+    #direct_link_url{
+        width: $col-w * 4;
+        margin: 0 $col-w;
+        padding: 2px;
+        font-size: $font-size;
+        @include inset_input(1px);
+        margin-bottom: 5px;
+    }
+
+    #iframe_code{
+        position:relative;
+        z-index:3;
+        width: $col-w * 4;
+        height:$row-h * 2;
+        margin: 8px $col-w;
+        font-size: $font-size;
+        @include inset_input(1px);
+        margin-bottom: 5px;
+    }
+
+    .embed_customization{
+        font-size: $font-size - .1;
+        margin-bottom: 5px;
+    }
+
+    .embed_customizator{
+        position:relative;
+        z-index:3;
+        width: 40px;
+        @include inset_input(1px);
+    }
+
+    #publish_chart{
+        margin: 0 auto;
+        width: $col-w * 6;
+        height: $row-h * 10;
+    }
+}
