@@ -17,8 +17,10 @@
 	* @return	zilch, it just gets the job done
 	*/
 
-	function setLanguage($lang, $domain = "messages", $baseFolder = "./locale") {
+	function setLanguage($lang, $domain = "messages", $baseFolder = "") {
 
+				$baseFolder = dirname(__FILE__)."/../locale";
+				
 				$_SESSION[LANG_SESSION_VAR] = $lang;
 
                 $codeset = "UTF-8";
